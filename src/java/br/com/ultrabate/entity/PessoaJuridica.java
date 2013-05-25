@@ -22,15 +22,15 @@ public class PessoaJuridica implements Serializable {
    @Id @GeneratedValue(strategy = GenerationType.AUTO) 
    private int Id;
    @Column(name="Emp_Documento")
-   private double EmpresaDocumento;
+   private String EmpresaDocumento;
    @Column(name="Pjur_Codigo_Pessoa")
-   private int codigoPessoaJuridica;        
+   private String codigoPessoaJuridica;        
    @Column(name="Pjur_Documento")
-   private double documentoPessoaJuridica;
+   private String documentoPessoaJuridica;
    @Column(name="Pjur_RSocial")
    private String razaoSocial;       
    @Column(name="Pjur_IE")
-   private double inscricaoEstadual;
+   private String inscricaoEstadual;
    @Column(name="Pjur_observacao")
    private String observacao;       
    @Column(name="Pjur_Email")
@@ -70,7 +70,7 @@ public class PessoaJuridica implements Serializable {
    @Column(name="CodigoNotaFiscal")
    private String codigoNotaFiscal;       
    @Column(name="formacobranca")
-   private int formaCobranca;
+   private String formaCobranca;
 
     public int getId() {
         return Id;
@@ -80,27 +80,27 @@ public class PessoaJuridica implements Serializable {
         this.Id = Id;
     }
 
-    public double getEmpresaDocumento() {
+    public String getEmpresaDocumento() {
         return EmpresaDocumento;
     }
 
-    public void setEmpresaDocumento(double EmpresaDocumento) {
+    public void setEmpresaDocumento(String EmpresaDocumento) {
         this.EmpresaDocumento = EmpresaDocumento;
     }
 
-    public int getCodigoPessoaJuridica() {
+    public String getCodigoPessoaJuridica() {
         return codigoPessoaJuridica;
     }
 
-    public void setCodigoPessoaJuridica(int codigoPessoaJuridica) {
+    public void setCodigoPessoaJuridica(String codigoPessoaJuridica) {
         this.codigoPessoaJuridica = codigoPessoaJuridica;
     }
 
-    public double getDocumentoPessoaJuridica() {
+    public String getDocumentoPessoaJuridica() {
         return documentoPessoaJuridica;
     }
 
-    public void setDocumentoPessoaJuridica(double documentoPessoaJuridica) {
+    public void setDocumentoPessoaJuridica(String documentoPessoaJuridica) {
         this.documentoPessoaJuridica = documentoPessoaJuridica;
     }
 
@@ -112,11 +112,11 @@ public class PessoaJuridica implements Serializable {
         this.razaoSocial = razaoSocial;
     }
 
-    public double getInscricaoEstadual() {
+    public String getInscricaoEstadual() {
         return inscricaoEstadual;
     }
 
-    public void setInscricaoEstadual(double inscricaoEstadual) {
+    public void setInscricaoEstadual(String inscricaoEstadual) {
         this.inscricaoEstadual = inscricaoEstadual;
     }
 
@@ -272,12 +272,14 @@ public class PessoaJuridica implements Serializable {
         this.codigoNotaFiscal = codigoNotaFiscal;
     }
 
-    public int getFormaCobranca() {
+    public String getFormaCobranca() {
         return formaCobranca;
     }
 
-    public void setFormaCobranca(int formaCobranca) {
+    public void setFormaCobranca(String formaCobranca) {
         this.formaCobranca = formaCobranca;
     }
+
+    
 
 }
