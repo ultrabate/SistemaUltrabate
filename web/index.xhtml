@@ -4,11 +4,16 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
     <head>
         <title>TODO supply a title</title>
     </head>
     <body>
-        <div>TODO write content</div>
+        <form>
+            Razão Social<h:inputText value="#{pessoaJuridicaBean.pessoa.razaoSocial}"/>
+            <h:inputHidden/>
+            <h:commandButton value="Cadastrar" action="#{pessoaJuridicaBean.adicionarPessoaJuridica}"/>
+        </form>
     </body>
 </html>
