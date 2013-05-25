@@ -21,8 +21,8 @@ public class PessoaJuridicaDAO {
     public void addPessoaJuridica(PessoaJuridica pj) {
 
         try {
-            
-            
+
+
             sessao = HibernateUtil.getSessionFactory().openSession();
             transacao = sessao.beginTransaction();
 
@@ -56,19 +56,43 @@ public class PessoaJuridicaDAO {
 
             sessao.save(pessoa);
             transacao.commit();
+
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        } finally {
+
+
+            sessao.close();
+
+
+        }
+
+    }
+
+    public void removePessoaJuridica(PessoaJuridica pj) {
+
+        try {
+
+            sessao = HibernateUtil.getSessionFactory().openSession();
+            transacao = sessao.beginTransaction();
             
-            
+            sessao.delete(pj);
+            transacao.commit();
+
         } catch (Exception e) {
             
             e.printStackTrace();
-            
-        } finally{
-            
+        } finally {
             
             sessao.close();
-            
-            
+        
         }
+
+
+
 
     }
 }
