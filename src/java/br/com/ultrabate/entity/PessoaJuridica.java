@@ -51,9 +51,9 @@ public class PessoaJuridica implements Serializable {
    private String celular;       
    @Column(name="Pjur_NmContato")
    private String numeroContato;       
-   @Column(name="Pjur_Banco") // coluna utiliza para inserir o codigo Dnit(site)
+   @Column(name="Pjur_Banco")
    private String codigoDnit;      
-   @Column(name="Pjur_Ag") // coluna utilizada para a senha do codigo Dnit
+   @Column(name="Pjur_Ag")
    private String senhaDnit;       
    @Column(name="Pjur_Conta")
    private String conta;       
@@ -280,28 +280,4 @@ public class PessoaJuridica implements Serializable {
         this.formaCobranca = formaCobranca;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 31 * hash + this.Id;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final PessoaJuridica other = (PessoaJuridica) obj;
-        if (this.Id != other.Id) {
-            return false;
-        }
-        return true;
-    }
-   
-   
-   
 }
