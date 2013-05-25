@@ -64,7 +64,9 @@ public class PessoaJuridicaDAO {
             
         } finally{
             
+            
             sessao.close();
+            
             
         }
 
