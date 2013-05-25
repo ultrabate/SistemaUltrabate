@@ -11,11 +11,12 @@ and open the template in the editor.
         <title>TODO supply a title</title>
     </head>
     <body>
-        
-        <h:form>
-            Razão Social<h:inputText value="#{pessoaJuridicaBean.pessoa.razaoSocial}"/>
-            <h:inputHidden/>
-            <h:commandButton value="Cadastrar" action="#{pessoaJuridicaBean.adicionarPessoaJuridica}"/>
-        </h:form>
+        <ui:composition template="/Template.xhtml">
+            <h:form>
+                Razão Social<h:inputText value="#{pessoaJuridicaBean.pessoa.razaoSocial}"/>
+                <h:inputHidden/>
+                <h:commandButton value="Cadastrar" action="#{pessoaJuridicaBean.adicionarPessoaJuridica}"/>
+            </h:form>
+        </ui:composition>    
     </body>
 </html>
