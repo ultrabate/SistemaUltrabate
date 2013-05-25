@@ -25,13 +25,13 @@ public class PessoaJuridicaBean {
     
     public String adicionarPessoaJuridica(){
         pessoaDAO.addPessoaJuridica(pessoa);
-        return "PessoaJuridica";
+        return "index";
     }
 
     public String removerPessoaJuridica(){
         
         pessoaDAO.removePessoaJuridica(pessoa);
-        return "PessoJuridica";
+        return "index";
     }
     
     public PessoaJuridica getPessoa() {
