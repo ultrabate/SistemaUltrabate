@@ -14,10 +14,9 @@ and open the template in the editor.
     <h:body>
         <h:form>
             <h:panelGrid columns="2">
-                Razao Social :<h:inputText size="40"/>
+                Razao Social :<h:inputText size="40" value="#{pessoaJuridicaBean.pessoa.razaoSocial}"/>
                 <h:inputHidden/>
-                <h:commandButton value="Cadastrar"/>
-                
+                <h:commandButton value="Cadastrar" action="#{pessoaJuridicaBean.adicionarPessoaJuridica()}"/>
             </h:panelGrid>
             
         </h:form>
