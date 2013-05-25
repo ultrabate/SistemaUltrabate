@@ -78,17 +78,18 @@ public class PessoaJuridicaDAO {
 
             sessao = HibernateUtil.getSessionFactory().openSession();
             transacao = sessao.beginTransaction();
-            
+
             sessao.delete(pj);
             transacao.commit();
 
         } catch (Exception e) {
-            
+
             e.printStackTrace();
+
         } finally {
-            
+
             sessao.close();
-        
+
         }
 
 
