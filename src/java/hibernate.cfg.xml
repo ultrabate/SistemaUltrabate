@@ -7,7 +7,5 @@
     <property name="hibernate.connection.url">jdbc:mysql://187.17.103.159:3306/ultrabate?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">ultrabate</property>
     <property name="hibernate.connection.password">A1H4J8K9</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
-    <mapping class="br.com.ultrabate.entity.PessoaJuridica"/>
   </session-factory>
 </hibernate-configuration>
